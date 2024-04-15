@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>APP Semilla</title>
+	<link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="manifest" href="manifest.json"/>
+</head>
+<body>
+	<style>
+		@font-face {
+			font-family: 'action';
+			src: url('./fonts/KOMIKAX_.ttf') format('truetype');
+			font-weight: 500; /* Peso para Light */
+			font-style: normal;
+		}
+		
+		.title-span
+		{
+		  font-family: 'action', sans-serif !important;
+		  color:rgb(255, 255, 0) !important;
+		
+		font-size:2.4rem !important;}
+				@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+		
+				input
+				{
+					width:90% !important;
+					outline: none;
+					height: 1.6rem !important;
+					font-size: 1rem !important;
+					border: none;
+					border-radius:4px;
+				}   
+		
+				label
+				{
+					text-align: start !important;
+					color:#fff !important;
+					font-size: 1.1rem !important;
+				}
+			</style>
+	<main id="container">
+
+			<header style="display: flex; align-items: center; justify-content: center; gap:1rem">
+				<span class="title-span" style="  text-shadow: 
+				1.5px 1.5px 0 #000,   /* Sombra superior direita */
+				-1.5px 1.5px 0 #000,  /* Sombra superior esquerda */
+				1.5px -1.5px 0 #000,  /* Sombra inferior direita */
+				-1.5px -1.5px 0 #000; /* Sombra inferior esquerda */"> APP Semilla</span><img style="max-height: 3.5rem !important; width: auto !important; max-width: 100%;" src="src\img\flax-seed (1).png">
+			</header>       </div>
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					var estiloVida = localStorage.getItem('estiloVida'); // Use o mesmo nome de chave
+					var estiloVidaSpan = document.querySelector('.nomeSalvo'); // Selecione o elemento correto
+					if(estiloVidaSpan) {
+						estiloVidaSpan.textContent = estiloVida; // Defina o conteúdo de texto
+					}
+				});
+			</script>	
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe frameborder="0" allowfullscreen src="https://scripts.converteai.net/db5cbd8e-56ce-4e76-a05c-63546f690e24/players/65c15596c3451b00075adff1/embed.html" id="ifr_65c15596c3451b00075adff1" style="position:absolute;top:0;left:0;width:100%;height:100%;" referrerpolicy="origin"></iframe></div>
+<section id="cards_pdf">
+
+
+			<div class="card" onclick="window.location.href='paginas/demora_gozagem_inicio.html'">
+				<img src="src/img/anti_gozagem.png" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Demora Gozo</p>
+			</div>
+			<div class="card" onclick="window.location.href='paginas/fonte_do_vigor_inicio.html'">
+				<img src="src/img/fonte_juventude (1).png" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Fuente de Vigor	</p>
+			</div>
+			<div class="card" onclick="window.location.href='paginas/truque_da_semente_inicio.html'">
+				<img src="src/img/5a0c43a45a997e1c2cea1193.png" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Truque das Sementes</p>
+			</div>
+			<div class="card" onclick="window.location.href='paginas/pau_leao_inicio.html'">
+				<img src="src/img/lion-51-1024x1024 (1).png" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Pene de Leon</p>
+			</div>
+
+			<div class="card" onclick="window.location.href='paginas/playlists.html'">
+				<img style="border-radius:4px; height: 6rem; object-fit: cover;" src="src\img\photo-1593309404036-8e39088b6071.avif" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Música do prazer</p>
+			</div>
+
+			<div class="card" onclick="window.location.href='paginas/dona_fogosa.html'">
+				<img style="border-radius:4px; height: 6rem; object-fit: cover;" src="src\img\igor-starkov-g1MNr0I25GI-unsplash.jpg" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Dona Fogosa</p>
+			</div>
+		
+
+
+		</section>
+		<div class="card_pepino_produto" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+			<img style="max-width: 80%; " src="src/img/5a0c43a45a997e1c2cea1193.png">
+			<a href="/mulondo" type="submit" style="width: 80%; " id="prosseguirLink" class="btn_card">Comprar</a>
+		</div>
+	</main>
+	<script>
+        function instalar_pwa() {
+        	if (localStorage.pwa) {} else {
+	            if ('serviceWorker' in navigator && 'PushManager' in window) {
+	                window.addEventListener('load', () => {
+	                    if (!window.matchMedia('(display-mode: standalone)').matches) {
+	                        deferredPrompt.prompt();
+	                        deferredPrompt.userChoice.then((choiceResult) => {
+	                            if (choiceResult.outcome === 'accepted') {
+	                                localStorage.setItem('pwa', 'accepted');
+	                            } else {
+	                                localStorage.setItem('pwa', 'rejected');
+	                            }
+	                            deferredPrompt = null;
+	                        });
+	                    }
+	                });
+
+	                let deferredPrompt;
+	                window.addEventListener('beforeinstallprompt', (e) => {
+	                    e.preventDefault();
+	                    deferredPrompt = e;
+	                });
+	            }
+        	}
+        }
+
+        window.addEventListener("click", () => {
+        	instalar_pwa()
+		}, { once: true });
+    </script>
+
+<script>
+
+    // Adiciona um ouvinte de evento ao documento para o evento 'contextmenu'
+document.addEventListener('contextmenu', function(event) {
+    // Impede o menu de contexto padrão de ser exibido
+    event.preventDefault();
+}, false);
+</script>
+</body>
+</html>

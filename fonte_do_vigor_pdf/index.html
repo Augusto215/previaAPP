@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SEMILLA APP</title>
+	<link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/embed_pdf.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.6/pdfobject.min.js"></script>
+</head>
+<body>
+	<main id="container">
+        
+			<style>
+				@font-face {
+					font-family: 'action';
+					src: url('./fonts/KOMIKAX_.ttf') format('truetype');
+					font-weight: 500; /* Peso para Light */
+					font-style: normal;
+				}
+				
+				.title-span
+				{
+				  font-family: 'action', sans-serif !important;
+				
+				font-size:2.4rem !important;}
+						@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+				
+						input
+						{
+							width:90% !important;
+							outline: none;
+							height: 1.6rem !important;
+							font-size: 1rem !important;
+							border: none;
+							border-radius:4px;
+						}   
+				
+						label
+						{
+							text-align: start !important;
+							color:#fff !important;
+							font-size: 1.1rem !important;
+						}
+					</style>
+					<main id="container">
+						<header style="display: flex; align-items: center; justify-content: center; gap:1rem; margin-bottom: 1rem;">
+							<span class="title-span" style="  text-shadow: 
+							1.5px 1.5px 0 #000,   /* Sombra superior direita */
+							-1.5px 1.5px 0 #000,  /* Sombra superior esquerda */
+							1.5px -1.5px 0 #000,  /* Sombra inferior direita */
+							-1.5px -1.5px 0 #000; /* Sombra inferior esquerda */"> SEMILLA APP</span><img style="max-height: 3.5rem !important; width: auto !important; max-width: 100%;" src="src\img\flax-seed (1).png">
+						</header>   
+						<a href="/fonte_do_vigor_inicio" style="color:#fff !important;">Volver</a>    </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var nomeSalvo = localStorage.getItem('nome');
+                nomeSpan = document.querySelector('.nomeSalvo')
+                nomeSpan.textContent = nomeSalvo;
+              
+               
+                
+            });
+            </script>		
+		<section class="pdf"  style="margin-top:1rem">
+
+			<img src="src/Slice 7 (6).png">
+			<img src="src/Slice 43.png">
+			<img src="src/Slice 47.png">
+			<img src="src/Slice 48.png">
+			<img src="src/Slice 49.png">
+			<img src="src/Slice 8 (4).png">
+			
+		</section>
+	</main>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			var estiloVida = localStorage.getItem('estiloVida'); // Use o mesmo nome de chave
+			var estiloVidaSpan = document.querySelector('.nomeSalvo'); // Selecione o elemento correto
+			if(estiloVidaSpan) {
+				estiloVidaSpan.textContent = estiloVida; // Defina o conteúdo de texto
+			}
+		});
+	</script>	
+
+<script>
+
+    // Adiciona um ouvinte de evento ao documento para o evento 'contextmenu'
+document.addEventListener('contextmenu', function(event) {
+    // Impede o menu de contexto padrão de ser exibido
+    event.preventDefault();
+}, false);
+</script>
+
+</body>
+</html>

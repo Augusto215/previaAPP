@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SEMENTE APP</title>
+	<link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="manifest" href="manifest.json"/>
+</head>
+<body>
+    <style>
+        @font-face {
+    font-family: 'action';
+    src: url('./fonts/comic-adventure-comic-adventure-svg-400.otf') format('truetype');
+    font-weight: 500; /* Peso para Light */
+    font-style: normal;
+}
+
+.title-span
+{
+  font-family: 'action', sans-serif !important;
+  color:#ffe07c !important;
+
+font-size:2.4rem !important;}
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+        input
+        {
+            width:90% !important;
+            outline: none;
+            height: 1.6rem !important;
+            font-size: 1rem !important;
+            border: none;
+            border-radius:4px;
+        }   
+
+        label
+        {
+            text-align: start !important;
+            color:#fff !important;
+            font-size: 1.1rem !important;
+        }
+    </style>
+	<main id="container">
+        <div class="top-header" style="padding-top:1rem;">
+            <span style="color:#fff !important;"> Olá <span class="nomeSalvo"></span></span>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var nomeSalvo = localStorage.getItem('nome');
+                nomeSpan = document.querySelector('.nomeSalvo')
+                nomeSpan.textContent = nomeSalvo;
+              
+               
+                
+            });
+            </script>
+		<header style="display: flex; align-items: center; justify-content: center; gap:1rem">
+			<img style="max-height: 4rem !important; width: auto !important;" src="src\img\gender.png"><span class="title-span" style="color:#fff !important;"> Semente APP</span>
+		</header>
+		<div class="carousel-container">
+		    <div class="carousel">
+		      <img src="src\img\ramin-talebi-q6-qUkKH9CY-unsplash.jpg" alt="Imagem 1">
+		    </div>
+		</div>
+			<form style="margin-top:1.5rem !important; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+               <div class="form-field"><label for="nome">Nome:</label>
+                <input id="nome">
+            </div> 
+
+            <div class="form-field">
+                <label for="idade">Idade:</label>
+                <input id="idade">
+            </div>
+
+            <div class="form-field">
+                <label for="peso">Peso:</label>
+                <input id="peso">
+            </div>
+
+            <div class="form-field">
+                <label for="altura">Altura:</label>
+                <input id="altura">
+            </div>
+                </form>
+		<div class="card_pepino_produto">
+			<img style="max-width: 80%;" src="src/img/5a0c43a45a997e1c2cea1193.png">
+			<button id="prosseguirLink" class="btn_card">Gerar Receita com Base nos meus Dados</button>
+		</div>
+	</main>
+	<script>
+        function instalar_pwa() {
+        	if (localStorage.pwa) {} else {
+	            if ('serviceWorker' in navigator && 'PushManager' in window) {
+	                window.addEventListener('load', () => {
+	                    if (!window.matchMedia('(display-mode: standalone)').matches) {
+	                        deferredPrompt.prompt();
+	                        deferredPrompt.userChoice.then((choiceResult) => {
+	                            if (choiceResult.outcome === 'accepted') {
+	                                localStorage.setItem('pwa', 'accepted');
+	                            } else {
+	                                localStorage.setItem('pwa', 'rejected');
+	                            }
+	                            deferredPrompt = null;
+	                        });
+	                    }
+	                });
+
+	                let deferredPrompt;
+	                window.addEventListener('beforeinstallprompt', (e) => {
+	                    e.preventDefault();
+	                    deferredPrompt = e;
+	                });
+	            }
+        	}
+        }
+
+        window.addEventListener("click", () => {
+        	instalar_pwa()
+		}, { once: true });
+    </script>
+
+<script>
+    document.getElementById('prosseguirLink').addEventListener('click', function(event) {
+var nome = document.getElementById('nome').value;
+var idade = document.getElementById('idade').value;
+var peso = document.getElementById('peso').value;
+var altura = document.getElementById('altura').value;
+
+
+
+localStorage.setItem('nome', nome);
+localStorage.setItem('idade', idade);
+localStorage.setItem('peso', peso);
+localStorage.setItem('altura', altura);
+
+});
+
+
+</script>
+
+</body>
+</html>

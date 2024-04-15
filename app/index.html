@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SEMENTE APP</title>
+	<link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="manifest" href="manifest.json"/>
+</head>
+<body>
+	<style>
+		@font-face {
+			font-family: 'action';
+			src: url('./fonts/KOMIKAX_.ttf') format('truetype');
+			font-weight: 500; /* Peso para Light */
+			font-style: normal;
+		}
+		
+		.title-span
+		{
+		  font-family: 'action', sans-serif !important;
+		  color:rgb(255, 255, 0) !important;
+		
+		font-size:2.4rem !important;}
+				@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+		
+				input
+				{
+					width:90% !important;
+					outline: none;
+					height: 1.6rem !important;
+					font-size: 1rem !important;
+					border: none;
+					border-radius:4px;
+				}   
+		
+				label
+				{
+					text-align: start !important;
+					color:#fff !important;
+					font-size: 1.1rem !important;
+				}
+			</style>
+	<main id="container">
+
+		<header style="display: flex; align-items: center; justify-content: center; gap:1rem">
+			<span class="title-span" style="  text-shadow: 
+			1.5px 1.5px 0 #000,   /* Sombra superior derecha */
+			-1.5px 1.5px 0 #000,  /* Sombra superior izquierda */
+			1.5px -1.5px 0 #000,  /* Sombra inferior derecha */
+			-1.5px -1.5px 0 #000; /* Sombra inferior izquierda */"> Semilla APP</span><img style="max-height: 3.5rem !important; width: auto !important; max-width: 100%;" src="src\img\flax-seed (1).png">
+		</header>
+	
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				var estiloVida = localStorage.getItem('estiloVida'); // Use el mismo nombre de clave
+				var estiloVidaSpan = document.querySelector('.nomeSalvo'); // Seleccione el elemento correcto
+				if(estiloVidaSpan) {
+					estiloVidaSpan.textContent = estiloVida; // Defina el contenido de texto
+				}
+			});
+		</script>    
+	
+		<div style="padding:56.25% 0 0 0;position:relative;"><iframe frameborder="0" allowfullscreen src="https://scripts.converteai.net/db5cbd8e-56ce-4e76-a05c-63546f690e24/players/65c15596c3451b00075adff1/embed.html" id="ifr_65c15596c3451b00075adff1" style="position:absolute;top:0;left:0;width:100%;height:100%;" referrerpolicy="origin"></iframe></div>
+	
+		<section id="cards_pdf">
+	
+			<div class="card" onclick="window.location.href='/demora_gozagem_inicio'">
+				<img src="src/img/anti_gozagem.png" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Demora-Gozo</p>
+			</div>
+			<div class="card" onclick="window.location.href='/fonte_do_vigor_inicio'">
+				<img src="src/img/fonte_juventude (1).png" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Fuente de Vitalidad</p>
+			</div>
+			<div class="card" onclick="window.location.href='/truque_da_semente_inicio'">
+				<img src="src/img/5a0c43a45a997e1c2cea1193.png" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Truco de las Semillas</p>
+			</div>
+			<div class="card" onclick="window.location.href='/pau_leao_inicio'">
+				<img src="src/img/lion-51-1024x1024 (1).png" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Pene de León</p>
+			</div>
+	
+			<div class="card" onclick="window.location.href='/playlists'">
+				<img style="border-radius:4px; height: 6rem; object-fit: cover;" src="src\img\photo-1593309404036-8e39088b6071.avif" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Música del placer</p>
+			</div>
+	
+			<div class="card" onclick="window.location.href='/dona_fogosa'">
+				<img style="border-radius:4px; height: 6rem; object-fit: cover;" src="src\img\igor-starkov-g1MNr0I25GI-unsplash.jpg" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Dama Fogosa</p>
+			</div>
+			<div class="card" onclick="window.location.href='/truque_da_semente_inicio'">
+				<img src="src/img/hqdefault (2).jpg" style="border-radius:4px; height: 6rem; width:auto;" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">Conquista</p>
+			</div>
+			<div class="card" onclick="window.location.href='/pau_leao_inicio'">
+				<img src="src/img/hqdefault (1) (1).jpg" style="border-radius:4px; height: 6rem; width:auto;" class="imagem_card">
+				<p style="color:#fff !important;" class="texto_card">10 Trucos</p>
+			</div>
+
+
+		</section>
+
+	</main>
+	<script>
+        function instalar_pwa() {
+        	if (localStorage.pwa) {} else {
+	            if ('serviceWorker' in navigator && 'PushManager' in window) {
+	                window.addEventListener('load', () => {
+	                    if (!window.matchMedia('(display-mode: standalone)').matches) {
+	                        deferredPrompt.prompt();
+	                        deferredPrompt.userChoice.then((choiceResult) => {
+	                            if (choiceResult.outcome === 'accepted') {
+	                                localStorage.setItem('pwa', 'accepted');
+	                            } else {
+	                                localStorage.setItem('pwa', 'rejected');
+	                            }
+	                            deferredPrompt = null;
+	                        });
+	                    }
+	                });
+
+	                let deferredPrompt;
+	                window.addEventListener('beforeinstallprompt', (e) => {
+	                    e.preventDefault();
+	                    deferredPrompt = e;
+	                });
+	            }
+        	}
+        }
+
+        window.addEventListener("click", () => {
+        	instalar_pwa()
+		}, { once: true });
+    </script>
+
+<script>
+
+    // Adiciona um ouvinte de evento ao documento para o evento 'contextmenu'
+document.addEventListener('contextmenu', function(event) {
+    // Impede o menu de contexto padrão de ser exibido
+    event.preventDefault();
+}, false);
+</script>
+</body>
+</html>
